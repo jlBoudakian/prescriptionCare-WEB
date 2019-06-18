@@ -78,6 +78,7 @@ function requestAPI(method, path, data, options = {}) {
     return axios(url, requestOptions)
         .then((response) => {
             // console.log(response);
+            //sessionStorage.getItem('token') fazer o setItem
             return response;
         })
         .catch((error) => console.log(error));
