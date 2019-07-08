@@ -76,10 +76,17 @@ function requestAPI(method, path, data, options = {}) {
         url += '?' + getParams
     }
     return axios(url, requestOptions)
-        .then((response) => {
+        .then((res) => {
             // console.log(response);
             //sessionStorage.getItem('token') fazer o setItem
-            return response;
+            if (res.status === 200) {
+                if (sessionStorage['token'] === undefined) {
+                    sessionStorage.setItem('token', res.headers._t);
+                } else if (res.headers._t !== undefined) {
+                    sessionStorage['token'] = res.headers._t;
+                }
+            }
+            return res;
         })
         .catch((error) => console.log(error));
 }

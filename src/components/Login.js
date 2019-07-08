@@ -50,13 +50,12 @@ class Login extends Component {
             }
             api.authentication.login(data, this.source.token)
                 .then((res) => {
-
-                    // // console.log(res);
-                    // if (res.data.count === 0) {
-                    //     return alert('Username and/or password invalid!')
-                    // } else if (res.data.count === 1) {
-                    //     this.setState({ redirect: true })
-                    // }
+                    // console.log(res);
+                    if (!res.data.auth) {
+                        console.log('erro');
+                    } else if (validator.isJWT(res.data.auth)) {
+                        this.setState({ redirect: true })
+                    }
                 })
                 .catch((error) => {
                     console.log('no')
