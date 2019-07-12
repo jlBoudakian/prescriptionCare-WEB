@@ -6,6 +6,7 @@ import HomePage from './home/HomePage';
 import Medicines from './medicines/Medicines';
 import Schedule from './schedule/Schedule';
 import Register from './Register';
+import Feedback from './feedback/Feedback';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/medicines" component={Medicines} />
             <Route path="/schedule" component={Schedule} />
             <Route path="/register" component={Register} />
+            <Route path="/feedback" component={Feedback} />
             <Route component={NotFound} />
           </Switch>
         </Router>

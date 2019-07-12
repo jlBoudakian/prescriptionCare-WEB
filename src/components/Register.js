@@ -91,20 +91,22 @@ class Register extends Component {
                     </div>
                     <div className="form-area">
                         <div className="group">
-                            <input type="text" className="form-control" placeholder="Fullname" onChange={this.handleChangeName} />
+                            <input type="text" className="form-control" placeholder="Full name" onChange={this.handleChangeName} />
                             <i className="fa fa-user"></i>
                         </div>
-                        <div className="form-horizontal" style={{ marginBottom: 18 }}>
-                            <fieldset>
-                                <div className="control-group">
-                                    <div className="controls">
-                                        <div className="input-prepend input-group">
-                                            <span className="add-on input-group-addon"><i className="fa fa-calendar"></i></span>
-                                            <input type="text" id="date-picker" className="form-control" placeholder="03/18/2015" onChange={this.handleChangeBirthDate} />
+                        <div className="group">
+                            <div className="form-horizontal" >
+                                <fieldset>
+                                    <div className="control-group">
+                                        <div className="controls">
+                                            <div className="input-prepend input-group">
+                                                <span className="add-on input-group-addon"><i className="fa fa-calendar"></i></span>
+                                                <input type="text" id="date-picker" className="form-control" placeholder="03/18/2015" onChange={this.handleChangeBirthDate} />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </fieldset>
+                                </fieldset>
+                            </div>
                         </div>
                         <div className="group">
                             <input type="text" className="form-control" placeholder="E-mail" onChange={this.handleChangeEmail} />
@@ -112,10 +114,6 @@ class Register extends Component {
                         </div>
                         <div className="group">
                             <input type="password" className="form-control" placeholder="Password" onChange={this.handleChangePassword} />
-                            <i className="fa fa-key"></i>
-                        </div>
-                        <div className="group">
-                            <input type="password" className="form-control" placeholder="Password again" />
                             <i className="fa fa-key"></i>
                         </div>
                         <button type="submit" className="btn btn-default btn-block" onClick={this.handleCheck}>REGISTER NOW</button>

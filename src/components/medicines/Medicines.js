@@ -70,8 +70,9 @@ class Medicines extends Component {
                         <h1 className="title">Medicines</h1>
                         <ol className="breadcrumb">
                             <li><a href="/home">Home</a></li>
-                            <li><a href="/medicines">Medicines</a></li>
                             <li><a href="/schedule">Schedule</a></li>
+                            <li><a href="/feedback">Feedback</a></li>
+                            <li><a href="/medicines">Medicines</a></li>
                         </ol>
                     </div>
                     {/* End Page Header */}

@@ -6,13 +6,14 @@ class Sidebar extends Component {
         return (
 
             <div className="sidebar clearfix">
-                <ul className="sidebar-panel nav">
+                <ul className="sidebar-panel nav" >
+                    {/* style={{ position: "fixed" }} */}
                     <li className="sidetitle">MAIN</li>
-                    <li><a href="/"><span className="icon color5"><i className="fa fa-home"></i></span>HomePage</a></li>
-                    <li><a href="/medicines"><span className="icon color6"><i className="fa fa-medkit"></i></span>Medicines</a></li>
-                    <li><a href="charts.html"><span className="icon color8"><i className="fa fa-bar-chart"></i></span>Charts</a></li>
+                    <li><a href="/home"><span className="icon color5"><i className="fa fa-home"></i></span>HomePage</a></li>
+                    <li><a href="/schedule"><span className="icon color8"><i className="fa fa-calendar"></i></span>Schedule</a></li>
+                    <li><a href="/feedback"><span className="icon color6"><i className="fa fa-edit"></i></span>Feedback</a></li>
                     <li>
-                        <a href="#"><span className="icon color9"><i className="fa fa-th"></i></span>Tables<span className="caret"></span></a>
+                        <a href="/medicines"><span className="icon color9"><i className="fa fa-medkit"></i></span>Medicines<span className="caret"></span></a>
                         <ul>
                             <li><a href="basic-table.html">Basic Tables</a></li>
                             <li><a href="data-table.html">Data Tables</a></li>

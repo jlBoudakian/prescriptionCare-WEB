@@ -54,6 +54,7 @@ class Login extends Component {
                     if (!res.data.auth) {
                         console.log('erro');
                     } else if (validator.isJWT(res.data.auth)) {
+                        sessionStorage.setItem('token', res.data.auth);
                         this.setState({ redirect: true })
                     }
                 })
